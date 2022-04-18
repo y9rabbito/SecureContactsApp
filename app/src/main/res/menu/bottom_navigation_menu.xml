@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/callLogFragment"
+        android:icon="@drawable/ic_log"
+        android:title="Call Log" />
+    <item
+        android:id="@+id/phoneBookFragment"
+        android:icon="@drawable/ic_phonebook"
+        android:title="Phonebook" />
+    <item
+        android:id="@+id/dialerFragment"
+        android:icon="@drawable/ic_dialer"
+        android:title="Dialer" />
+
+</menu>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_menu_nav"
+    app:startDestination="@id/phoneBookFragment">
+
+    <fragment
+        android:id="@+id/callLogFragment"
+        android:name="com.rabbito.securecontacts.Fragments.callLogFragment"
+        android:label="Call Log"
+        tools:layout="@layout/fragment_call_log" >
+        <action
+            android:id="@+id/action_callLogFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneBookFragment"
+        android:name="com.rabbito.securecontacts.Fragments.phoneBookFragment"
+        android:label="PhoneBook"
+        tools:layout="@layout/fragment_phone_book">
+        <action
+            android:id="@+id/action_phoneBookFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_phoneBookFragment_to_callFragment"
+            app:destination="@id/callFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialerFragment"
+        android:name="com.rabbito.securecontacts.Fragments.dialerFragment"
+        android:label="Dialer"
+        tools:layout="@layout/fragment_dialer" />
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.rabbito.securecontacts.Fragments.add.addFragment"
+        android:label="Add Contact"
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_addFragment_to_phoneBookFragment"
+            app:destination="@id/phoneBookFragment" />
+        <argument
+            android:name="number"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/callFragment"
+        android:name="com.rabbito.securecontacts.Fragments.call.callFragment"
+        android:label="Call"
+        tools:layout="@layout/fragment_call">
+        <action
+            android:id="@+id/action_callFragment_to_phoneBookFragment"
+            app:destination="@id/phoneBookFragment" />
+        <action
+            android:id="@+id/action_callFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <argument
+            android:name="currentContact"
+            app:argType="com.rabbito.securecontacts.Model.Contact" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.rabbito.securecontacts.Fragments.update.updateFragment"
+        android:label="Update Contact"
+        tools:layout="@layout/fragment_update">
+        <action
+            android:id="@+id/action_updateFragment_to_phoneBookFragment"
+            app:destination="@id/phoneBookFragment" />
+        <argument
+            android:name="currentContact"
+            app:argType="com.rabbito.securecontacts.Model.Contact" />
+    </fragment>
+</navigation>

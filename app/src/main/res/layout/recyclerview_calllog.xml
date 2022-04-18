@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/currentItem"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/callLogName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Mom"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/callLogDuration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginStart="4dp" />
+
+    <TextView
+        android:id="@+id/callLogNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="+919903810285"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/callLogType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/callLogName" />
+
+    <ImageView
+        android:id="@+id/callLogType"
+        android:layout_width="20dp"
+        android:layout_height="0dp"
+        android:src="#27E412"
+        app:layout_constraintBottom_toBottomOf="@id/callLogNumber"
+        app:layout_constraintEnd_toStartOf="@id/guidelineCallLog"
+        app:layout_constraintTop_toBottomOf="@id/callLogName" />
+
+    <TextView
+        android:id="@+id/callLogDuration"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal"
+        android:text="1 H 32 m 21 sec"
+        app:layout_constraintBottom_toBottomOf="@id/callLogType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineCallLog"
+        app:layout_constraintTop_toTopOf="@id/callLogType" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCallLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <TextView
+        android:id="@+id/callLogDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="monospace"
+        android:gravity="center_horizontal"
+        android:text="17:18"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineCallLog"
+        app:layout_constraintTop_toTopOf="@id/callLogName" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/callLogType" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

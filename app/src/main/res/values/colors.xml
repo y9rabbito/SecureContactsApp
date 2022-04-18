@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pink_primary">#c2185b</color>
+    <color name="pink_statusBar">#8c0032</color>
+    <color name="pink_text">#FA5788</color>
+    <color name="blue_primary">#3949ab</color>
+    <color name="blue_dark">#00227b</color>
+    <color name="yellow">#FFD54F</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red_cancel">#D32F2F</color>
+    <color name="green_call">#008F39</color>
+</resources>
